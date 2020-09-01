@@ -1,0 +1,64 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <meta charset="UTF-8">
+    <title>profile</title>
+</head>
+
+<div class="card bg-info" style="align:center">
+      <div class="card-body text-center">
+          <body  style="text-align:center" >
+<h1> User Profile </h1><hr>
+<h1>username : {{user.username}}</h1>
+<h1>email : {{user.email}}</h1>
+<h1>photo</h1><img src="{{ user.profile.image.url }} ">
+      </div>
+    </div>
+</body>
+</html>-->
+
+{% load static %}
+
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/profile.css' %}">
+
+
+<br><br>
+<div class="container-fluid well span6" style="text:align:center">
+	<div class="row-fluid">
+        <div class="span4" >
+            <img src="{{ user.profile.image.url }} " class="img-circle">
+<hr>
+        </div>
+
+        <div class="span8">
+         <body  >
+<h1> User Profile </h1><hr>
+<h3>username : {{user.username}}</h3>
+<h3>email : {{user.email}}</h3>
+        </div>
+
+        <div class="span2"   >
+            <div class="btn-group">
+                <a class="btn dropdown-toggle btn-info" data-toggle="dropdown" href="#">
+                    Action
+                    <span class="icon-cog icon-white"></span><span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#"><span class="icon-wrench"></span> Modify</a></li>
+                    <li><a href="#"><span class="icon-trash"></span> Delete</a></li>
+                </ul>
+            </div>
+        </div>
+    </div></body>
+</div>

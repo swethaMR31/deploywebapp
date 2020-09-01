@@ -1,0 +1,64 @@
+{% load static %}
+<!--<html lang="en">
+<head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/edit.css' %}">
+
+    <meta charset="UTF-8">
+    <title>candidate Registration</title>
+</head>
+<body>
+        <center><h1>Candidate Registration</h1></center><br>
+    <div class="container" style="align:center">
+        <form method="post">
+        {{form.as_p}}
+            {% csrf_token %}
+            <button type = "submit" class = "save btn btn-default">Submit</button>
+        </form>
+    </div>
+</body>
+</html> -->
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/reg.css' %}">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">MRS VOLLEYBALL ACADEMY</a>
+    </div>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="{% url 'main' %}"><span class="glyphicon glyphicon-log-in"></span>Home</a></li>
+    </ul>
+  </div>
+</div>
+</nav>
+<head>
+    <style>
+        .form_main{
+        background-color:#FFA07A;
+        }
+    </style>
+</head>
+<div class="container">
+	<div class="row justify-content-center">
+    <div class="col-md-8">
+		<div class="form_main" >
+                <h4 class="heading"><strong >Candidate  </strong> Registration <span></span></h4>
+                <div class="form">
+                    <form method="post" >
+        {{form.as_p}}
+            {% csrf_token %}
+            <button type = "submit" class = "txt2">Submit</button>
+        </form>
+
+            </div>
+            </div>
+            </div>
+	</div>
+</div>
+
+

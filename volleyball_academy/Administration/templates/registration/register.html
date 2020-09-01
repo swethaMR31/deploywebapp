@@ -1,0 +1,59 @@
+
+{% load static %}
+<html>
+<head>
+    	<link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}">
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script></head>
+
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container register">
+                <div class="row">
+                    <div class="col-md-3 register-left">
+                        <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                        <h3>Welcome</h3>
+                        <p>You are 30 seconds away from entering into sports!</p>
+                        <input type="submit"  name="login" value="Login">
+                        <a href="{% url 'login' %}"></a>
+                    </div>
+                    <div class="col-md-9 register-right">
+                        <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Student</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Fresher</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <h1 class="register-heading"><B>REGISTRATION FORM</B></h1>
+
+                                <div class="row register-form">
+                                    <div class="col-md-6">
+
+                                    <div class="container">
+
+                                           <div class = "form-group" >
+            <form method = "POST", action = "{% url 'register' %}">
+                {% csrf_token %}
+                    {% if form.errors %}
+                        <p>There are errors in the form!</p>
+                    {% endif %}
+                    {{form.as_p}}
+                    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+                <div>
+                    <input type="submit" class="btnRegister"  value="Register"/>
+                    <a href="{% url 'login' %}"></a>
+
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+
+
+

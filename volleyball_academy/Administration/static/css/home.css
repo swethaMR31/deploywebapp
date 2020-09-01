@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Numans');
+
+html,body{
+background-image: url('https://cutewallpaper.org/21/volleyball-quotes-wallpapers/Latest-Mens-Volleyball-Wallpaper-BYU-Cougar-Club.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+font-family: 'Numans', sans-serif;
+}
+
+/*.item active{
+width:1200px;
+height:10px;
+}
+.item{
+width:1200px;
+height:450px;
+}
+.img src{
+width:1800px;
+height:450px;
+}*/
+.h3
+{
+color:black;
+}
+.carousel-caption{
+color:white;
+}
